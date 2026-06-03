@@ -29,7 +29,7 @@ https://clinic-demo-website-ten.vercel.app
 
 ## 👨‍💻 Developed By
 
-Rahul M
+Muthupandi M
 
 ## Live Project
 
