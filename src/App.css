@@ -1,0 +1,433 @@
+:root {
+  font-family: Inter, Arial, sans-serif;
+  --primary: #1d6fe0;
+  --dark: #12385c;
+  --text: #486682;
+  --light: #eef6ff;
+  --white: #ffffff;
+  --border: #d9e7f7;
+  --shadow: 0 25px 70px rgba(29, 111, 224, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #f7fbff, #eaf4ff);
+  color: var(--dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.app-shell {
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px;
+}
+
+/* Navbar */
+.site-header {
+  position: sticky;
+  top: 18px;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 22px 28px;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: var(--dark);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.main-nav a {
+  font-size: 17px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  color: var(--primary);
+}
+
+/* Buttons */
+.button {
+  border: none;
+  border-radius: 50px;
+  padding: 15px 28px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.button-primary {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 12px 30px rgba(29, 111, 224, 0.32);
+}
+
+.button-secondary {
+  background: #dbeaff;
+  color: var(--primary);
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+/* Hero */
+.hero-section {
+  min-height: 78vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  padding: 70px 10px 40px;
+}
+
+.hero-copy {
+  max-width: 580px;
+}
+
+.eyebrow {
+  color: var(--primary);
+  font-weight: 800;
+  letter-spacing: 4px;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.hero-copy h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.05;
+  color: var(--dark);
+  font-weight: 900;
+  margin-bottom: 22px;
+}
+
+.hero-copy p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 28px;
+}
+
+.hero-image {
+  border-radius: 36px;
+  overflow: hidden;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.hero-image img {
+  height: 520px;
+  object-fit: cover;
+}
+
+/* Common Sections */
+.about-section,
+.services-section,
+.doctors-section,
+.appointment-section,
+.testimonials-section,
+.contact-section {
+  margin-top: 80px;
+}
+
+.section-header,
+.section-intro {
+  max-width: 720px;
+  margin-bottom: 35px;
+}
+
+.section-header h2,
+.section-intro h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  color: var(--dark);
+  margin-bottom: 15px;
+}
+
+.section-header p,
+.section-intro p {
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Cards Grid */
+.feature-grid,
+.services-grid,
+.doctors-grid,
+.testimonials-grid,
+.contact-grid {
+  display: grid;
+  gap: 25px;
+}
+
+.feature-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.services-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.doctors-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.testimonials-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.contact-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Cards */
+.feature-card,
+.service-card,
+.doctor-card,
+.testimonial-card,
+.contact-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  padding: 30px;
+  box-shadow: 0 15px 40px rgba(18, 56, 92, 0.06);
+  transition: 0.3s;
+}
+
+.feature-card:hover,
+.service-card:hover,
+.doctor-card:hover,
+.testimonial-card:hover,
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow);
+}
+
+.feature-card h3,
+.doctor-card h3,
+.contact-card h3 {
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.feature-card p,
+.doctor-card p,
+.testimonial-card p,
+.contact-card p {
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.service-card {
+  min-height: 150px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 18px;
+}
+
+/* Doctor */
+.doctor-card {
+  text-align: center;
+}
+
+.doctor-avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1d6fe0, #0c55b8);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+/* Appointment */
+.appointment-section {
+  background: linear-gradient(135deg, #ffffff, #eaf4ff);
+  border-radius: 35px;
+  padding: 45px;
+  box-shadow: var(--shadow);
+}
+
+.appointment-form {
+  display: grid;
+  gap: 22px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--dark);
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: white;
+  color: var(--dark);
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(29, 111, 224, 0.12);
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Testimonials */
+.testimonial-card span {
+  display: block;
+  margin-top: 20px;
+  color: var(--primary);
+  font-weight: 800;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 70px;
+  padding: 25px;
+  text-align: center;
+  color: var(--text);
+}
+
+/* Tablet */
+@media (max-width: 950px) {
+  .hero-section,
+  .feature-grid,
+  .services-grid,
+  .doctors-grid,
+  .testimonials-grid,
+  .contact-grid,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-section {
+    text-align: center;
+    min-height: auto;
+  }
+
+  .hero-copy {
+    margin: auto;
+  }
+
+  .hero-image img {
+    height: 420px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .app-shell {
+    padding: 16px;
+  }
+
+  .site-header {
+    border-radius: 20px;
+    padding: 18px;
+  }
+
+  .brand {
+    font-size: 24px;
+  }
+
+  .main-nav {
+    gap: 14px;
+  }
+
+  .main-nav a {
+    font-size: 14px;
+  }
+
+  .hero-copy h1 {
+    font-size: 38px;
+  }
+
+  .hero-copy p {
+    font-size: 16px;
+  }
+
+  .hero-image img {
+    height: 320px;
+  }
+
+  .appointment-section {
+    padding: 25px;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
